@@ -1,0 +1,20 @@
+.auth-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/home/home.jpg") center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .link {
+    color: white;
+    // text-decoration: none;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    position: fixed;
+    bottom: 15%;
+  }
+}

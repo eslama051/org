@@ -1,0 +1,12 @@
+@import "./components/homeHeader";
+@import "./components/homeCarousel";
+@import "./pages/homePage";
+@import "./base/typography";
+@import "./pages/auth-page";
+@import "./components/loginComponent";
+@import "./components/baseButton";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,10 @@
+.home-carousel {
+  width: 100%;
+  height: 100vh;
+  opacity: 0.9;
+  overflow: hidden;
+  .owl-item img {
+    height: 100vh;
+    display: block;
+  }
+}

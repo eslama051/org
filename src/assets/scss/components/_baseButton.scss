@@ -1,0 +1,23 @@
+.base-button,
+.base-link a {
+  text-decoration: none;
+  padding: 0.3rem 1.9rem;
+  font: inherit;
+  background-color: red;
+  /* border: 1px solid #3a0061; */
+  color: white;
+  cursor: pointer;
+  border: none;
+  //   border-radius: 5px;
+  font-size: 1.2rem;
+
+  /* margin-right: 0.5rem; */
+  display: inline-block;
+}
+
+a:hover,
+a:active,
+.base-button:hover,
+.base-button:active {
+  opacity: 0.8;
+}
