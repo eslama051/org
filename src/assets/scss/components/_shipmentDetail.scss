@@ -1,0 +1,58 @@
+.shipment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .shipment-detail {
+    width: 49%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .customer-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+
+    margin-bottom: 3rem;
+
+    img {
+      width: 50px;
+    }
+    h2,
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+    h4 {
+      color: gray;
+      font-size: 15px;
+    }
+  }
+  .delivering-details {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .package-list {
+    list-style-type: none;
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .shipment-details {
+    display: block;
+    .shipment-detail {
+      width: 100%;
+    }
+  }
+}

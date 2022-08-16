@@ -9,7 +9,7 @@
       <input name="code" class="code-input" required />
       <input name="code" class="code-input" required />
     </div>
-    <base-button @click="console.log('fda')">shit</base-button>
+    <base-button>Verfiy</base-button>
   </form>
 </template>
 
@@ -27,7 +27,7 @@ export default {
       if (code.length > 6) {
         return;
       }
-      this.$router.push("/shipments");
+      this.$router.push("/shipments/list");
     },
   },
   mounted() {

@@ -12,12 +12,10 @@ import "./assets/scss/main.scss";
 //importing footor
 import TheFooter from "./components/layouts/TheFooter.vue";
 
-import VuePhoneNumberInput from "vue-phone-number-input";
-import "vue-phone-number-input/dist/vue-phone-number-input.css";
-
-Vue.component("vue-phone-number-input", VuePhoneNumberInput);
+import BaseCard from "./components/ui/BaseCard.vue";
 
 Vue.component("base-button", BaseButton);
+Vue.component("base-card", BaseCard);
 Vue.component("the-footer", TheFooter);
 Vue.config.productionTip = false;
 

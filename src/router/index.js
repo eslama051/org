@@ -3,7 +3,9 @@ import VueRouter from "vue-router";
 import HomePage from "../pages/HomePage.vue";
 import AuthanticationPage from "../pages/AuthanticationPage.vue";
 import ShipmentsPage from "../pages/ShipmentsPage.vue";
-import ShipmentsInfo from "../pages/ShipmentsInfo.vue";
+import ShipmentsList from "../components/shipments/ShipmentsList.vue";
+import shimpmentDetail from "../components/shipments/shimpmentDetail.vue";
+
 import LogIn from "../components/auth/LogIn.vue";
 import VerfiyLogin from "../components/auth/VerfiyLogin.vue";
 
@@ -23,8 +25,14 @@ const routes = [
       { path: "verfiy", component: VerfiyLogin },
     ],
   },
-  { path: "/shipments", component: ShipmentsPage },
-  { path: "/shipments/:id", component: ShipmentsInfo },
+  {
+    path: "/shipments",
+    component: ShipmentsPage,
+    children: [
+      { path: "list", component: ShipmentsList },
+      { path: ":id", component: shimpmentDetail, props: true },
+    ],
+  },
 ];
 
 const router = new VueRouter({

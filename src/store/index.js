@@ -1,9 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import shipmentsModule from "./shipments/";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  modules: {
+    shipments: shipmentsModule,
+  },
   state: {
     fullNumber: null,
   },
@@ -22,5 +26,4 @@ export default new Vuex.Store({
       conetext.commit("setNumber", payload);
     },
   },
-  modules: {},
 });

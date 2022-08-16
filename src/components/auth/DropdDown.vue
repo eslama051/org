@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="flag-btn" @click="toggleDropdown">
+    <button type="button" class="flag-btn" @click="toggleDropdown">
       <img :src="getmyUrl(selecetedCountry.flag)" alt="fdasfa" />{{
         selecetedCountry.key
       }}
