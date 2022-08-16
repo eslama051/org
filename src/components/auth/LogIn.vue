@@ -5,9 +5,10 @@
     <form action="">
       <!--   <vue-phone-number-input v-model="number"></vue-phone-number-input> -->
       <div class="form-control">
-        <div class="country-div">
+        <!-- <div class="flag-div">
           <img src="../../assets/images/home/ar.png" alt="" />+2
-        </div>
+        </div> -->
+        <drop-down @seleceted-Key="setCountryKey" />
         <input type="text" placeholder="Phone number" v-model="number" />
       </div>
       <p style="color: red" v-if="isInvalid">please inter a valid number</p>
@@ -16,12 +17,17 @@
   </div>
 </template>
 <script>
+import DropDown from "./DropdDown.vue";
 export default {
   data() {
     return {
+      countrykey: null,
       number: "",
       isInvalid: false,
     };
+  },
+  components: {
+    DropDown,
   },
   methods: {
     signIn() {
@@ -30,8 +36,13 @@ export default {
         this.isInvalid = true;
         return;
       }
-      console.log(this.number);
+      console.log(this.countrykey + this.number);
+      const fullNumber = this.countrykey + this.number;
+      this.$store.dispatch("setNumber", fullNumber);
       this.$router.push("/auth/verfiy");
+    },
+    setCountryKey(key) {
+      this.countrykey = key;
     },
   },
 };
